@@ -1,0 +1,103 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>光魄智能运维平台</TITLE>
+<META name='KEYWORDS' CONTENT='光魄智能运维平台'>
+<META name='DESCRIPTION' CONTENT='光魄智能运维平台'>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=gb2312'>
+
+<style>
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+</HEAD>
+<body background="index_bg.png" style="background-repeat:repeat-x;" bgcolor="#000000">
+
+<br>
+<br>
+
+<center>
+
+<!--<div id="v_button" style="width: 100%;position: absolute; top:0px; right:0px; bottom: 0px; left:0px; overflow: hidden; z-index:500; background-color:#999999" align="center"></div>-->
+	<form name="login_form" id="login_form">
+		<table border="0" width="1200" height="600" style="background: url(index_bg.jpg) no-repeat center center;background-size: 100%;">
+			<tr><td align="left" height="100" style="padding:10px;" valign="top"><img src="gp_logo.png" height="40" style="opacity:0.8; filter:alpha(opacity=80);"></td></tr>
+			<tr><td align="left" height="100">
+			
+			</td></tr>
+			<tr><td align="left" height="100" style="padding-left:490px; padding-top:30px;">
+				<input type="text" name="username" placeholder="请输入管理员账号" style="border:0px;background:rgba(0, 0, 0, 0); color:#FFFFFF " >
+			</td></tr>
+			<tr><td align="left" height="250" style="padding-left:490px; padding-top:16px;" valign="top">
+				<input type="text" name="password" placeholder="请输入密码" style="border:0px;background:rgba(0, 0, 0, 0); color:#FFFFFF " ><br>
+				<br>
+				<br>
+				<table border="0"><tr><td width="220" height="40" onClick="Login();"></td></tr></table><br>
+				<input type="checkbox">&nbsp;<font color="#666" style="font-size:14px;">记住管理员账号</font>
+			</td></tr>
+			
+			<tr><td height="50" align="center" style="font-size:12px; color:#666666">产权所有：光魄智能科技（上海）有限公司&nbsp;&nbsp;&nbsp;&nbsp;技术支持：上海晋锐文化传播有限公司</td></tr>
+		</table>
+	</form>
+</center>
+
+
+<script>
+function Login(){
+	var obj=document.getElementById('login_form');
+	
+	if(obj.username.value=='admin' && obj.password.value=='123456'){
+		window.location.href='indexframe.htm'
+		return ;
+	}else{
+		alert('请输入正确的管理员账号和密码登录。');
+		return ;	
+	}
+}
+</script>
+
+<!--
+<table width="100%"><tr><td>
+	<img src="/images/logo.png">
+</td></tr></table>
+
+<table width='100%' border='0' bgcolor="#0591C2">
+<tr><td height="600" valign="middle" align="center">
+
+			<table border="0" cellpadding="1" cellspacing="1" bgcolor="#FFFFFF" width="500">
+				<tr><td height="50" bgcolor="#0C9ED1" align="left" style="color:#FFFFFF;font-size:24px;">窝窝家事后台管理系统</td></tr>
+				<tr><td height="200" style="padding:50px;" bgcolor="#A5DDEE" align="center">
+				<?php
+				if(($username!='' || $password!='') && $error!=''){
+					?>
+					<p>
+						<font color="#FF0000"><?php echo $error;?></font>
+					</p>
+					<?php
+				}
+				?>
+				<form method="post" action="index.php">
+					<table>
+						<tr><td height="40" colspan="2"><b>请登录后使用</b></td></tr>
+						<tr><td height="40">管理账号：</td><td><input type="text" name="username" size="20"></td></tr>
+						<tr><td height="40">管理密码：</td><td><input type="password" name="password" size="20"></td></tr>
+						<tr><td height="40"></td><td><input type="submit" value="确定登录"></td></tr>
+					</table>
+				</form>
+				</td></tr>
+				
+				<tr><td height="40" bgcolor="#0587B8" align="left" style="color:#FFFFFF">版权所有：上海晋锐文化传播有限公司，2019</td></tr>
+				
+			</table>
+</td></tr>
+</table>
+-->
+
+</body>
+</HTML>

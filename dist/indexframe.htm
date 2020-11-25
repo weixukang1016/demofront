@@ -1,0 +1,113 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>光魄智能运维平台</TITLE>
+<META name='KEYWORDS' CONTENT='光魄智能运维平台'>
+<META name='DESCRIPTION' CONTENT='光魄智能运维平台'>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+<style type="text/css">
+<!--
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #00FF00;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+}
+-->
+</style>
+</head>
+
+<body background="c_bg.jpg">
+<center>
+
+<table width="100%" background="title_bg.jpg">
+	<tr>
+	
+	
+	<td height="60" align="left" style="padding:5px;"><a href="indexframe.htm"><img src="gp_logo.png" height="46" border="0"></a></td>
+	
+	
+	<td align="left">
+		<table>
+			<tr>
+				<td><img src="t_1.jpg" height="30"></td><td height="20" style="padding-right:20px;"><font style="font-size:14px; color:#CCCCCC">运营监控</font></td>
+				<td><img src="t_2.jpg" height="30"></td><td height="20" style="padding-right:20px;"><font style="font-size:14px; color:#CCCCCC">生产管理</font></td>
+				<td><img src="t_3.jpg" height="30"></td><td height="20" style="padding-right:20px;"><font style="font-size:14px; color:#CCCCCC">电站维护</font></td>
+				<td><img src="t_4.jpg" height="30"></td><td height="20" style="padding-right:20px;"><font style="font-size:14px; color:#CCCCCC">系统管理</font></td>
+			</tr>
+		</table>
+	</td>
+	
+	
+	<td width="200" align="center"><font style="font-size:14px; color:#CCCCCC">欢迎 admin</font></td>
+	
+	<td width="32"><a href="index.htm"><img src="t_5.jpg" height="30" border="0"></a></td><td height="20" style="padding-right:20px;" align="left"><a href="index.htm"><font style="font-size:14px; color:#CCCCCC">退出系统</font></a></td>
+	
+	</tr>
+
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td width="160" height="800" valign="top" align="left" bgcolor="#0C1744" style="padding-left:30px;">
+			<br>
+			
+			<table><tr><td><a href="init.htm" target="admin_area"><img src="m_1.jpg" height="35" border="0"></a></td><td height="20" align="left"><a href="init.htm" target="admin_area"><font style="font-size:14px; color:#CCCCCC">首页</font></a></td></tr></table>
+			<br>
+			<table><tr><td><a href="init.htm" target="admin_area"><img src="m_2.jpg" height="35" border="0"></a></td><td height="20" align="left"><a href="init.htm" target="admin_area"><font style="font-size:14px; color:#CCCCCC">电力监控</font></a></td></tr></table>
+			<br>
+			<table><tr><td><img src="m_3.jpg" height="35"></td><td height="20" align="left"><font style="font-size:14px; color:#CCCCCC">光伏区监控</font></td></tr></table>
+			<br>
+			<table><tr><td><img src="m_4.jpg" height="35"></td><td height="20" align="left"><font style="font-size:14px; color:#CCCCCC">设备分布图</font></td></tr></table>
+			<br>
+			<table><tr><td><img src="m_5.jpg" height="35"></td><td height="20" align="left"><font style="font-size:14px; color:#CCCCCC">设备实时数据</font></td></tr></table>
+			<br>
+			<table><tr><td><img src="m_6.jpg" height="35"></td><td height="20" align="left"><font style="font-size:14px; color:#CCCCCC">故障警告</font></td></tr></table>
+			<br>
+			<table><tr><td><img src="m_7.jpg" height="35"></td><td height="20" align="left"><font style="font-size:14px; color:#CCCCCC">远程控制</font></td></tr></table>
+			
+
+			<br>
+			<br>
+			<table><tr><td id="tips_info" style="padding:5px; color:#FF0000;"></td></tr></table>
+		</td>
+		
+		<td valign="top" bgcolor="#FFFFFF">
+			 <iframe id="admin_area" src="init.htm" onload="" name="admin_area" width="100%" height="1200px" scrolling="auto"  frameborder="0"></iframe>
+			 <script>
+			 function reinitIframe(){
+					var iframe = document.getElementById("admin_area");
+						try{
+							var bHeight = iframe.contentWindow.document.body.scrollHeight;
+							//var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+							//var height = Math.min(bHeight, dHeight);
+							iframe.height = bHeight+100;
+							// console.log(iframe.height);
+						}catch (ex){}
+					}
+			 
+			 </script>		
+        </td>
+	</tr>
+</table>
+
+</center>
+
+</body>
+</html>

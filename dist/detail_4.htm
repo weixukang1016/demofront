@@ -1,0 +1,158 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+<title>无标题文档</title>
+
+<script language="javascript">
+window.parent.document.body.scrollTop=0;
+
+</script>
+
+<style>
+#triangle-up{
+	display:inline-block;
+	width:0;
+	height:0;
+	border-left:10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom:30px solid green;}
+#triangle-down {
+	display:inline-block;
+	width:0;
+	height:0;
+	border-left:10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top:30px solid green;}
+#triangle-left {
+	display:inline-block;
+	width:0;
+	height:0;
+	border-top: 10px solid transparent;
+	border-right: 30px solid green;
+	border-bottom: 10px solid transparent;}
+#triangle-right{
+	display:inline-block;
+	width:0;
+	height:0;
+	border-top: 10px solid transparent;
+	border-left: 30px solid green;
+	border-bottom: 10px solid transparent;}
+</style>
+</head>
+
+<body background="c_bg.jpg" style="padding:20px;">
+
+
+<center>
+
+<table width="60%">
+	<tr bgcolor="#0C1744">
+		<td align="center" style="color:#FFFFFF; padding:5px; font-size:14px;; padding:5px; font-size:14px;"><a style="text-decoration:none;color:#FFFFFF;" href="detail.htm">基本信息</a></td>
+		<td align="center" style="color:#FFFFFF; padding:5px; font-size:14px;"><a style="text-decoration:none;color:#FFFFFF;" href="detail_2.htm">电路拓扑</a></td>
+		<td align="center" style="color:#FFFFFF; padding:5px; font-size:14px;"><a style="text-decoration:none;color:#FFFFFF;" href="detail_3.htm">设备详情</a></td>
+		<td align="center" style="color:#FFFFFF; padding:5px; font-size:14px;" bgcolor="#182760"><a style="text-decoration:none;color:#FFFFFF;" href="detail_4.htm">效能分析</a></td>
+		<td align="center" style="color:#FFFFFF; padding:5px; font-size:14px;"><a style="text-decoration:none;color:#FFFFFF;" href="detail_5.htm">运维建议</a></td>
+	</tr>
+</table>	
+	
+<br>
+<div style="position: absolute; left:20px; top: 70px; overflow: hidden; z-index:600; background-color:rgba(50,50,50,0.3); border-radius:5px 5px 5px 5px; width: 96%;">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+			
+		<tr bgcolor="#182760">
+		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+			<form>
+			<input type="radio" name="r_sel" value="month">最近一月&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="r_sel" value="year">最近一年&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="r_sel" value="time">选择时间段，从<select><option value="">=请选择=</option></select>年<select><option value="">=请选择=</option></select>月，到<select><option value="">=请选择=</option></select>年<select><option value="">=请选择=</option></select>月&nbsp;
+			<input type="submit" value="确定">
+			</form>
+			
+		</td>
+		</tr>
+		
+	</table>
+</div>
+<br>
+<br>
+<br>
+
+<table width="100%">
+	<tr>
+	<td width="69%" valign="top">
+			<div style="overflow: hidden; z-index:600; background-color:rgba(50,50,50,0.3); border-radius:5px 5px 5px 5px; width: 100%;">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+						
+					<tr bgcolor="#182760">
+					<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+
+						
+							<table width="90%">
+								<tr>
+									<td align="center"><img src="flow_1.png" width="80"><br>辐照度</td><td align="center"><div id="triangle-right"></div><br>XXXXXXXXXX<br>XXXXXXXXXX</td>
+									<td align="center"><img src="flow_2.png" width="80"><br>光伏板</td><td align="center"><div id="triangle-right"></div><br>XXXXXXXXXX<br>XXXXXXXXXX</td>
+									<td align="center"><img src="flow_3.png" width="80"><br>汇流箱</td>
+								</tr>
+								
+								<tr><td></td><td></td><td></td><td></td><td align="center" style="padding:20px;"><div id="triangle-down"></div><br>XXXXXXXXXX<br>XXXXXXXXXX</td></tr>
+								
+								<tr>
+									<td align="center"><img src="flow_6.png" width="80"><br>逆变器</td><td align="center"><div id="triangle-left"></div><br>XXXXXXXXXX<br>XXXXXXXXXX</td>
+									<td align="center"><img src="flow_5.png" width="80"><br>变压器</td><td align="center"><div id="triangle-left"></div><br>XXXXXXXXXX<br>XXXXXXXXXX</td>
+									<td align="center"><img src="flow_4.png" width="80"><br>电网</td>
+								</tr>
+							</table>
+							
+
+					</td>
+					</tr>
+					
+				</table>
+			</div>
+	
+	</td>
+	<td width="1%"></td>
+	<td width="30%" valign="top">
+			<div style="overflow: hidden; z-index:600; background-color:rgba(50,50,50,0.3); border-radius:5px 5px 5px 5px; width: 100%;">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				
+					<tr bgcolor="#0C1744">
+					<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+						运维记录
+					</td>
+					</tr>
+					
+					<tr bgcolor="#182760">
+					<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+							
+						<table>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+							<tr><td height="20">XXX,XXX,XXX</td></tr>
+						</table>
+						
+					</td>
+					</tr>
+					
+				</table>
+			</div>		
+	
+	</td>
+	
+	</tr>
+	
+</table>
+
+</center>
+</body>
+
+</html>
+

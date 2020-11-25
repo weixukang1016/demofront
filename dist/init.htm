@@ -1,0 +1,163 @@
+<?php
+session_start();
+//include('../config.htm');
+//include('../conn.htm');
+?>
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+<title>无标题文档</title>
+
+<script language="javascript">
+window.parent.document.body.scrollTop=0;
+
+</script>
+
+</head>
+
+<body background="c_bg.jpg">
+
+
+<center>
+
+<div style="position: absolute; left:20px; top: 20px; overflow: hidden; z-index:600; background-color:rgba(50,50,50,0.3); border-radius:5px 5px 5px 5px; width: 96%;">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	
+		<tr bgcolor="#0C1744">
+		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+	
+			电站列表
+		</td>
+		</tr>
+		
+		<tr bgcolor="#182760">
+		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+			<form>
+			电站编号：<input type="text" name="str_1" placeholder="输入电站编号" style="border:0px;background:#0C1744; color:#FFFFFF; height:20px;" >&nbsp;
+			电站名称：<input type="text" name="str_2" placeholder="输入电站名称" style="border:0px;background:#0C1744; color:#FFFFFF;  height:20px;" >&nbsp;
+			缩写：<input type="text" name="str_3" placeholder="输入缩写" style="border:0px;background:#0C1744; color:#FFFFFF; height:20px; " >&nbsp;
+			<input type="submit" value="查询">
+			</form>
+			
+		</td>
+		</tr>
+		
+	</table>
+</div>
+
+<div style="position: absolute; left:20px; top: 160px; overflow: hidden; z-index:600; background-color:rgba(50,50,50,0.3); border-radius:5px 5px 5px 5px; width: 96%;">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	
+		<tr bgcolor="#0C1744">
+		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+		
+				<table width="100%">
+					<tr>
+						<td width="13%">电站编号</td>
+						<td width="17%">电站名称</td>
+						<td width="13%">缩写</td>
+						<td width="18%">位置描述</td>
+						<td width="13%">状态</td>
+						<td width="13%">健康度</td>
+						<td width="13%">详情</td>
+					</tr>
+				</table>
+				
+		</td>
+		</tr>
+		
+		<tr bgcolor="#182760">
+		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
+
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				
+					<tr>
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>
+					
+					<tr bgcolor="#263576">
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>
+					
+					<tr>
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>										
+					
+					<tr bgcolor="#263576">
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>
+					
+					<tr>
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>	
+										
+					<tr bgcolor="#263576">
+						<td height="20" width="13%">XXX</td>
+						<td width="17%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="18%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%">XXX</td>
+						<td width="13%"><a href="detail.htm" style="text-decoration:none; color:#CCCCCC">查看</a></td>
+					</tr>
+															
+				</table>
+				
+				<br>
+				<table width="100%">
+				<tr>
+				<td>
+					共有记录 xx 条，每页显示 x 条
+				</td>
+				<td align="right">
+					上一页&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;3&nbsp;&nbsp;4&nbsp;&nbsp;5&nbsp;&nbsp;下一页
+				</td>
+				</tr>
+				</table>
+			
+		</td>
+		</tr>
+		
+	</table>
+</div>
+
+</center>
+</body>
+
+</html>
+
