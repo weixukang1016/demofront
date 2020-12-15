@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 <title>无标题文档</title>
+<script src="./script/vue.min.js"></script>
 
 <script language="javascript">
 window.parent.document.body.scrollTop=0;
@@ -33,8 +34,7 @@ window.parent.document.body.scrollTop=0;
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 	
 		<tr bgcolor="#0C1744">
-		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
-		
+			<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
 				<table width="100%">
 					<tr>
 						<td width="13%">设备编号</td>
@@ -48,80 +48,23 @@ window.parent.document.body.scrollTop=0;
 					</tr>
 				</table>
 				
-		</td>
+			</td>
 		</tr>
 		
 		<tr bgcolor="#182760">
 		<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
-
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-				
-					<tr>
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>
-					
-					<tr bgcolor="#263576">
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>
-					
-					<tr>
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>										
-					
-					<tr bgcolor="#263576">
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>
-					
-					<tr>
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>	
-										
-					<tr bgcolor="#263576">
-						<td height="20" width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="10%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="13%">XXX</td>
-						<td width="15%">XXX</td>
-						<td width="13%">故障日志</td>
-					</tr>
-															
+			<div id="devices">
+				<table  v-for="(device, index) in deviceList" width="100%" border="0" cellpadding="0" cellspacing="0">
+					<tr v-bind:style="{ background: (index % 2 > 0) ? '#263576' : '#182760' }">
+						<td height="20" width="13%">{{ device.deviceNo + (index + 1) }}</td>
+						<td width="10%">{{ device.deviceType}}</td>
+						<td width="13%">{{ device.deviceModel}}</td>
+						<td width="10%">{{ device.deviceStatus}}</td>
+						<td width="13%">{{ device.deviceParameter}}</td>
+						<td width="13%">{{ device.deviceData}}</td>
+						<td width="15%">{{ device.deviceLocation}}</td>
+						<td width="13%"><a href='{{ device.logFile}}'>故障日志</a></td>
+					</tr>				
 				</table>
 				
 				<br>
@@ -135,7 +78,7 @@ window.parent.document.body.scrollTop=0;
 				</td>
 				</tr>
 				</table>
-			
+			</div>
 		</td>
 		</tr>
 		
@@ -145,6 +88,36 @@ window.parent.document.body.scrollTop=0;
 <br>
 
 </center>
+
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#devices',
+		data: {
+			deviceList: [
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-0000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''},
+			  { deviceNo: 'NBQ-000',deviceType: '逆变器', deviceModel: 'HTY-9329-T8', deviceStatus: '正常', deviceParameter: 'XXXX', deviceData: 'YYYYYYYY', deviceLocation: '第二行第三排', logFile: ''}
+			]
+		  }
+	});
+</script>
 </body>
 
 </html>

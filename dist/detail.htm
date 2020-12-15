@@ -39,7 +39,7 @@ window.parent.document.body.scrollTop=0;
 			<table width="100%">
 				<tr><td>装机容量：{{ BasicInfo.ZhurangjiRongliang }}MW</td><td colspan="2">当前功率：{{ BasicInfo.Gonglv }}MW</td></tr>
 				<tr><td>温度：{{ BasicInfo.Wendu }}°C</td><td>湿度：{{ BasicInfo.Shidu }}%</td><td>风速：{{ BasicInfo.Fengsu }}m/s</td></tr>
-				<tr><td>GHI：{{ BasicInfo.GHI }}</td><td>GDI：{{ BasicInfo.GDI }}</td><td>POA：{{ BasicInfo.POA }}</td></tr>
+				<tr><td>GHI：{{ BasicInfo.GHI }}</td><td>DHI：{{ BasicInfo.DHI }}</td><td>POA：{{ BasicInfo.POA }}</td></tr>
 			</table>
 			<br>
 			<a href="JavaScript:showMessage('test')" style="text-decoration:none; color:#3399CC">标杆组串1</a><br>
@@ -209,7 +209,7 @@ window.parent.document.body.scrollTop=0;
 				Shidu: "",
 				Fengsu: "",
 				GHI: "",
-				GDI: "",
+				DHI: "",
 				POA: ""
 			}
 		},
@@ -224,8 +224,7 @@ window.parent.document.body.scrollTop=0;
 			getPOA: function(){ return "62"; }
 		}
 	});
-
-	// 功率趋势图	
+	
 	var lineChartOption = {
 		xAxis: {
 			type: 'category',
@@ -255,6 +254,7 @@ window.parent.document.body.scrollTop=0;
 		animation: false
 	};
 
+	// 功率趋势图
 	var gonglvChartOption = {
 		xAxis: {
 			name:'时刻'
@@ -293,8 +293,11 @@ window.parent.document.body.scrollTop=0;
 			name:'月份'
 		},
 		yAxis: {
-			name:'mwh',
-			min:7000
+			name:'MWh',
+			min:7000,			
+			axisLabel: {
+				fontSize: 8
+			}
 		},
 		series: [{
 			smooth: true
@@ -400,7 +403,7 @@ window.parent.document.body.scrollTop=0;
 		vm.BasicInfo.Shidu = 30;
 		vm.BasicInfo.Fengsu = 5;
 		vm.BasicInfo.GHI = 23;
-		vm.BasicInfo.GDI = 52;
+		vm.BasicInfo.DHI = 52;
 		vm.BasicInfo.POA = 45;
 	}
 

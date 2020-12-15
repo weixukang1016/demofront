@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 <title>无标题文档</title>
+<script src="./script/vue.min.js"></script>
+<script src="./script/echarts.min.js"></script>
+
 
 <script language="javascript">
 window.parent.document.body.scrollTop=0;
@@ -46,6 +49,7 @@ window.parent.document.body.scrollTop=0;
 
 <body background="c_bg.jpg" style="padding:20px;">
 
+<div id="nengxiaofenxi">
 
 <center>
 
@@ -129,14 +133,8 @@ window.parent.document.body.scrollTop=0;
 					<tr bgcolor="#182760">
 					<td align="left" style="color:#ccc; font-size:14px; padding:20px;">
 							
-						<table>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
-							<tr><td height="20">XXX,XXX,XXX</td></tr>
+						<table v-for="record in maintenanceRecords">
+							<tr><td height="20">{{ record.recordDate}}</td><td height="20">{{ record.record}}</td></tr>
 						</table>
 						
 					</td>
@@ -150,8 +148,25 @@ window.parent.document.body.scrollTop=0;
 	</tr>
 	
 </table>
-
+</div>
 </center>
+
+<script type="text/javascript">
+
+	var vm = new Vue({
+		el: '#nengxiaofenxi',
+		data: {
+			maintenanceRecords: [
+			  { recordDate: '2020-10-21',record: '清洗光伏板'},
+			  { recordDate: '2020-8-12',record: '除草'},
+			  { recordDate: '2020-6-10',record: '设备检修'},
+			  { recordDate: '2020-4-4',record: '清洗光伏板'},
+			  { recordDate: '2020-1-28',record: '除雪'},
+			  { recordDate: '2019-12-28',record: '清洗光伏板'}
+			]
+		  }
+	});
+</script>
 </body>
 
 </html>
